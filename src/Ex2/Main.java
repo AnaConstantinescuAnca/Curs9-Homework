@@ -22,10 +22,7 @@ public class Main {
 
 
         Company company = new Company(personList);
-        //System.out.println(company.getPersonList().get(0).getName());
         //lista personal companie
-        //System.out.println("Lista personal Company : " + company.getPersonList().get(0).getName());
-        //System.out.println("Lista personal Company : " + it.next().getName());
         //
         for(Person angajat: company.getPersonList()){
             System.out.println(String.format("Angajatul %s in varsata de %d are functia de %s",
@@ -35,7 +32,7 @@ public class Main {
         // cine este manager
         System.out.println(String.format("Name of Manager is %s", company.getManager()));
 
-        //lista cu numele celor care sunt de profesie instalatori
+        //lista cu numele celor care sunt de profesie plummer
         System.out.println("Lista instalatori " + company.getPersons("plummer"));
 
         //lista persoanelor cu varsta >=40
@@ -45,10 +42,11 @@ public class Main {
         System.out.println("Lista persoanelor al caror nume contine 'escu' este: " + company.getPersonName("escu"));
 
         //adaug persoana nou angajata
-        //);
-        //System.out.println(company.employ("Popa",33,"carpenter"));
-        System.out.println(company.employ("Popa", 33, "manager"));
         System.out.println(company.employ("Popa", 33, "carpenter"));
+
+        // incerc sa adaug inca un manager
+        System.out.println(company.employ("Moga", 31, "manager"));
+
 
     }
 }
