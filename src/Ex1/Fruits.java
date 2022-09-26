@@ -1,3 +1,5 @@
+package Ex1;
+
 import java.util.HashSet;
 import java.util.Iterator;
 
