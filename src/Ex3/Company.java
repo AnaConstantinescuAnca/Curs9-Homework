@@ -20,7 +20,7 @@ public class Company {
 
     public String getManager() {
         for (int i = 0; i < personList.size(); i++) {
-            if (personList.get(i).getPosition() == "manager") {
+            if (personList.get(i).getPosition().contains("manager")) {
                 return personList.get(i).getName();
             }
         }
