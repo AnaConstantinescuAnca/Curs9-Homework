@@ -1,7 +1,9 @@
 package Ex1;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 public class Fruits {
     HashSet<String> listaFructe;
@@ -54,5 +56,7 @@ public class Fruits {
         return counter;
 
     }
+
+
 
 }

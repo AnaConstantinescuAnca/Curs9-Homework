@@ -1,6 +1,7 @@
 package Ex1;
 
-import java.util.HashSet;
+import javax.sound.midi.Soundbank;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,8 +35,17 @@ public class Main {
 
         System.out.println(String.format("Folosind metoda customCount, in cos avem %d fructe.",
                 basket.listaFructe.customCount()));
+
+        System.out.println(basket.listaFructe.getListaFructe());
+
+        // lista de fructe ordonata crescator
+        System.out.println("Lista de fructe ordonata crescator:");
+        List<String> listFruits = new ArrayList<>();
+        listFruits.addAll(listaFructe);
+        Collections.sort(listFruits);
+
+        for(String i : listFruits){
+            System.out.println(i);
+        }
     }
-
-
-
 }
