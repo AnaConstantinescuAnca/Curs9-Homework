@@ -58,14 +58,24 @@ public class Company {
         return listNameContains;
     }
 
-    public String employ(String nume, int age, String position) {
-        Person person  = new Person(nume,age,position);
+    //verific daca mai exista manager angajat in companie
+//    public boolean existManager(String position) {
+//        if (personList.contains(position) && position=="manager") {
+//            return true;
+//        }
+//        return false;
+//    }
 
-        if (position == "manager") {
-            return "Nu se poate adauga persoana !!!!";
-        } else {
-            personList.add(0,person);
+    public String employ(String nume, int age, String position) {
+        Person person = new Person(nume, age, position);
+        // verific in lista (personList) de obiecte(Person), daca mai am un manager
+        for (Person p : personList) {
+            if (position == "manager" && p.getPosition() == position) {
+                return "Nu se poate adauga, deoarece exista deja un manager in companie !!!!";
+            }
         }
-        return  "A fost add persoana";
+        // Add person to list
+        personList.add(0, person);
+        return "A fost adaugata persoana nou angajata";
     }
 }

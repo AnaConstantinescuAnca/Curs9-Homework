@@ -31,6 +31,11 @@ public class Main {
         basket.setListaFructe(new Fruits(listaFructe));
         System.out.println("cos actualizat cu un fruct: " + basket.listaFructe.getListaFructe());
 
+        //
+        listaFructe.add("pere");
+        basket.setListaFructe(new Fruits(listaFructe));
+        System.out.println("Se observa ca pere nu a mai fost adaugat, deoarece exista deja  : " + basket.listaFructe.getListaFructe());
+
         System.out.println(String.format("In cos avem %d fructe. ", basket.listaFructe.getListaFructe().size()));
 
         System.out.println(String.format("Folosind metoda customCount, in cos avem %d fructe.",

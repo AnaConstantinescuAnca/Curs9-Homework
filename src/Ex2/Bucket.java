@@ -27,10 +27,11 @@ public class Bucket {
     }
 
     public void addFloare(String flower) {
-        this.listaFlori.add(flower);
         if (this.listaFlori.contains(flower)) {
             System.out.println("S-a incercat adaugarea florii " + flower + " care deja exista in buchet.");
         }
+        this.listaFlori.add(flower);
+
     }
 
     public void removeFloare(String flower) {
